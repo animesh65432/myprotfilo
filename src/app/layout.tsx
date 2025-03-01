@@ -1,20 +1,14 @@
 "use client";
 
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Provider from "@/context/Provider";
 import { useContext } from "react";
 import { context } from "@/context";
+import { Fira_Code } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const firaCode = Fira_Code({ subsets: ["latin"], weight: ["400", "700"] });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export default function RootLayout({
   children,
@@ -23,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={firaCode.className}>
         <Provider>
           <ColorWrapper>{children}</ColorWrapper>
         </Provider>
