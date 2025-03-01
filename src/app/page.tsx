@@ -7,7 +7,7 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode';
 export default function Home() {
   const { color, ontoggole } = useContext(context)
   return (
-    <div className="grid grid-cols-12 ">
+    <div className="grid grid-cols-12 p-7">
       <div className="grid-cols-3 mt-4">
         <Navbar />
       </div>
