@@ -56,58 +56,58 @@ const Me: React.FC = () => {
                 </ul>
             </div>
 
-            <div className='mt-10 flex flex-col gap-2'>
-                <div className='flex  md:text-xl text-xs gap-4'>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <FaJsSquare className='h-[3vh] w-[3vw]' />
-                        Javascript
-                    </ul>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <FaReact className='h-[3vh] w-[3vw]' />
-                        React
-                    </ul>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <FaNodeJs className='h-[3vh] w-[3vw]' />
-                        Node js
-                    </ul>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <IoLogoHtml5 />
-                        Html
-                    </ul>
-                </div>
-                <div className='flex  md:text-xl text-xs gap-4'>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <FaCss3 className='h-[3vh] w-[3vw]' />
-                        Css
-                    </ul>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <BiLogoMongodb className='h-[3vh] w-[3vw]' />
-                        Mongodb
-                    </ul>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <BiLogoPostgresql className='h-[3vh] w-[3vw]' />
-                        Postgres
-                    </ul>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <SiTailwindcss />
-                        Tailwindcss
-                    </ul>
-                </div>
-                <div className='flex  md:text-xl text-xs gap-4'>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <SiSequelize className='h-[3vh] w-[3vw]' />
-                        Sequelize
-                    </ul>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <FaDocker className='h-[3vh] w-[3vw]' />
-                        Docker
-                    </ul>
-                    <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
-                        <FaAws className='h-[3vh] w-[3vw]' />
-                        Aws
-                    </ul>
+            <div className='mt-10  gap-2 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2'>
 
-                </div>
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2 '>
+                    <FaJsSquare className='h-[3vh] w-[3vw]' />
+                    Javascript
+                </ul>
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2 '>
+                    <FaReact className='h-[3vh] w-[3vw]' />
+                    React
+                </ul>
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2 '>
+                    <FaNodeJs className='h-[3vh] w-[3vw]' />
+                    Node js
+                </ul>
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2 '>
+                    <IoLogoHtml5 />
+                    Html
+                </ul>
+
+
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
+                    <FaCss3 className='h-[3vh] w-[3vw]' />
+                    Css
+                </ul>
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
+                    <BiLogoMongodb className='h-[3vh] w-[3vw]' />
+                    Mongodb
+                </ul>
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
+                    <BiLogoPostgresql className='h-[3vh] w-[3vw]' />
+                    Postgres
+                </ul>
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
+                    <SiTailwindcss />
+                    Tailwindcss
+                </ul>
+
+
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
+                    <SiSequelize className='h-[3vh] w-[3vw]' />
+                    Sequelize
+                </ul>
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
+                    <FaDocker className='h-[3vh] w-[3vw]' />
+                    Docker
+                </ul>
+                <ul className='rounded-md flex items-center border border-black p-2 gap-2'>
+                    <FaAws className='h-[3vh] w-[3vw]' />
+                    Aws
+                </ul>
+
+
             </div>
         </div >
     )
