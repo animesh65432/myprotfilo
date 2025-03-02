@@ -8,7 +8,7 @@ export default function Home() {
   const { color, ontoggole } = useContext(Context);
 
   return (
-    <div className={`grid grid-cols-12 md:p-7 p-3 ${color ? "bg-gray-900 text-white" : "bg-white text-black"} h-[100vh] transition-colors`}>
+    <div className={`grid grid-cols-12 md:p-7 p-3  h-[100vh] ${color ? "bg-gray-900 text-white" : "bg-white text-black"} transition-colors`}>
       <div className="md:col-span-2 mt-4 ">
         <div className="md:block hidden">
           <Navbar />
@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className="md:col-span-9 col-span-9 mt-4">
         <Me />
-        <div className="md:hidden block flex justify-center">
+        <div className="flex justify-center md:hidden block">
           <MobileNavbar />
         </div>
       </div>

@@ -17,9 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={firaCode.className}>
+      <body className={`${firaCode.className} `}>
         <Provider>
-          <ColorWrapper>{children}</ColorWrapper>
+          <ColorWrapper>
+            {children}
+          </ColorWrapper>
         </Provider>
       </body>
     </html>
@@ -29,5 +31,6 @@ export default function RootLayout({
 
 function ColorWrapper({ children }: { children: React.ReactNode }) {
   const { color } = useContext(context);
-  return <div className={color ? "bg-white h-[100vh] text-black" : "bg-black h-[100vh] text-white"}>{children}</div>;
+  return <div className={color ? "bg-white  text-black" : "bg-black   text-white"}>{children}
+  </div>;
 }
