@@ -1,24 +1,24 @@
 "use client"
-import { Me, Navbar, MobileNavbar } from "@/components/index";
+import { Me, Navbar, MobileNavbar, Project } from "@/components/index";
 import { context as Context } from "@/context";
 import { useContext } from "react";
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 export default function Home() {
-  const { color, ontoggole } = useContext(Context);
-
+  const { color, ontoggole, navbar, onsetnavbar } = useContext(Context);
   return (
     <div className={`grid grid-cols-12 md:p-7 p-3  h-[100vh] ${color ? "bg-gray-900 text-white" : "bg-white text-black"} transition-colors`}>
       <div className="md:col-span-2 mt-4 ">
         <div className="md:block hidden">
-          <Navbar />
+          <Navbar onsetnavbar={onsetnavbar} />
         </div>
       </div>
 
       <div className="md:col-span-9 col-span-9 mt-4">
-        <Me />
+        {navbar === "home" && <Me />}
+        {navbar === "project" && <Project />}
         <div className="flex justify-center md:hidden block">
-          <MobileNavbar />
+          <MobileNavbar onsetnavbar={onsetnavbar} />
         </div>
       </div>
 

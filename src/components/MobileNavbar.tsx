@@ -3,7 +3,11 @@ import { House, FolderOpenDot } from "lucide-react";
 import { useContext } from "react";
 import { context } from "@/context";
 
-const MobileNavbar: React.FC = () => {
+type Props = {
+    onsetnavbar: (selectnavbar: "home" | "project") => void
+}
+
+const MobileNavbar: React.FC<Props> = ({ onsetnavbar }) => {
     const { color } = useContext(context);
 
     return (
@@ -15,13 +19,13 @@ const MobileNavbar: React.FC = () => {
                 className={` rounded-full cursor-pointer transition-all duration-300 ${color ? "bg-gray-800 hover:bg-gray-700" : "bg-gray-200 hover:bg-gray-300"
                     }`}
             >
-                <House size={24} />
+                <House size={24} onClick={() => onsetnavbar("home")} />
             </div>
             <div
                 className={` rounded-full cursor-pointer transition-all duration-300 ${color ? "bg-gray-800 hover:bg-gray-700" : "bg-gray-200 hover:bg-gray-300"
                     }`}
             >
-                <FolderOpenDot size={24} />
+                <FolderOpenDot size={24} onClick={() => onsetnavbar("project")} />
             </div>
         </div>
     );
