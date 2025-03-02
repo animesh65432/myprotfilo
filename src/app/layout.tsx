@@ -29,5 +29,5 @@ export default function RootLayout({
 
 function ColorWrapper({ children }: { children: React.ReactNode }) {
   const { color } = useContext(context);
-  return <div className={color ? "bg-sky-50 h-[100vh] text-black" : "bg-black h-[100vh] text-white"}>{children}</div>;
+  return <div className={color ? "bg-white h-[100vh] text-black" : "bg-black h-[100vh] text-white"}>{children}</div>;
 }

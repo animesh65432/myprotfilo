@@ -8,7 +8,7 @@ const MobileNavbar: React.FC = () => {
 
     return (
         <div
-            className={`flex w-[90vw]  justify-around p-2 ${color ? "bg-black text-white" : "bg-white text-black"
+            className={`flex w-[90vw]  justify-around p-2 ${color ? "bg-slate-800 text-white" : "bg-yellow-50 text-black"
                 } h-[8vh] items-center rounded-xl shadow-md transition-all duration-300 `}
         >
             <div

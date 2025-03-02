@@ -7,10 +7,10 @@ const Navbar: React.FC = () => {
     return (
         <div className={`flex flex-col gap-3  sm:p-0 p-8 `} >
             <div>
-                <Button variant="link" className={color ? "text-black lg:text-xl text-sm" : "text-white sm:text-xl text-sm"}>About</Button>
+                <Button variant="link" className={color ? "text-amber-50 sm:text-xl text-sm" : "text-black sm:text-xl text-sm"}>About</Button>
             </div>
             <div>
-                <Button variant="link" className={color ? "text-black lg:text-xl text-sm" : "text-white sm:text-xl text-sm"}>
+                <Button variant="link" className={color ? "text-amber-50 sm:text-xl text-sm" : "text-black sm:text-xl text-sm"}>
                     Projects
                 </Button>
             </div>
