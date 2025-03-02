@@ -8,17 +8,17 @@ const MobileNavbar: React.FC = () => {
 
     return (
         <div
-            className={`flex w-[90vw] max-w-[400px] justify-around p-2 ${color ? "bg-black text-white" : "bg-white text-black"
-                } h-[8vh] items-center rounded-xl shadow-md transition-all duration-300`}
+            className={`flex w-[90vw]  justify-around p-2 ${color ? "bg-black text-white" : "bg-white text-black"
+                } h-[8vh] items-center rounded-xl shadow-md transition-all duration-300 `}
         >
             <div
-                className={`p-3 rounded-full cursor-pointer transition-all duration-300 ${color ? "bg-gray-800 hover:bg-gray-700" : "bg-gray-200 hover:bg-gray-300"
+                className={` rounded-full cursor-pointer transition-all duration-300 ${color ? "bg-gray-800 hover:bg-gray-700" : "bg-gray-200 hover:bg-gray-300"
                     }`}
             >
                 <House size={24} />
             </div>
             <div
-                className={`p-3 rounded-full cursor-pointer transition-all duration-300 ${color ? "bg-gray-800 hover:bg-gray-700" : "bg-gray-200 hover:bg-gray-300"
+                className={` rounded-full cursor-pointer transition-all duration-300 ${color ? "bg-gray-800 hover:bg-gray-700" : "bg-gray-200 hover:bg-gray-300"
                     }`}
             >
                 <FolderOpenDot size={24} />
