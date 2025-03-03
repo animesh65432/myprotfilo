@@ -7,7 +7,7 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode';
 export default function Home() {
   const { color, ontoggole, navbar, onsetnavbar } = useContext(Context);
   return (
-    <div className={`grid grid-cols-12 md:p-7 p-3  h-[100vh] ${color ? "bg-gray-900 text-white" : "bg-white text-black"} transition-colors`}>
+    <div className={`grid grid-cols-12 md:p-7 p-1 md:gap-0 gap-7 h-[100vh] ${color ? "bg-gray-900 text-white" : "bg-white text-black"} transition-colors`}>
       <div className="md:col-span-2 mt-4 ">
         <div className="md:block hidden">
           <Navbar onsetnavbar={onsetnavbar} />
@@ -22,9 +22,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="  md:col-span-1 col-span-2 md:mt-4 md:flex md:justify-center md:h-[6vh] w-[6vw] ">
+      <div className="  md:col-span-1 col-span-2 md:mt-4 mt-0 md:flex md:justify-center md:h-[6vh] w-[6vw] mt-0  ">
         <div
-          className={`p-3  `}
+          className={``}
         >
           <DarkModeSwitch
             checked={color}

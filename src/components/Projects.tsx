@@ -4,22 +4,35 @@ import axios from 'axios';
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { Icons } from "@/components/Icons"
 
 const Project: React.FC = () => {
     const [projects, setProjects] = useState<ProjecTypes[]>([]);
+    const [loading, setloading] = useState<boolean>(true)
 
     const fetchData = async () => {
+        setloading(true)
         try {
+
             const response = await axios.get('/api/projects');
             setProjects(response?.data);
         } catch (error) {
             console.error('Error fetching projects:', error);
+        }
+        finally {
+            setloading(false)
         }
     };
 
     useEffect(() => {
         fetchData();
     }, []);
+
+    if (loading) {
+        return <div className='h-[80vh] flex  items-center justify-center'>
+            <div><Icons.spinner className="mr-2 h-10 w-10 animate-spin" /></div>
+        </div>
+    }
 
     return (
         <div className='h-[80vh] overflow-auto mb-6 p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -36,12 +49,12 @@ const Project: React.FC = () => {
                         <h2 className='text-xl font-semibold text-gray-800'>{project.name.toUpperCase()}</h2>
                         <p className='text-gray-600 text-sm'>{project.about}</p>
                     </div>
-                    <div className='flex justify-between items-center mt-4'>
+                    <div className='flex flex-wrap justify-between items-center gap-2 mt-4'>
                         <a href={project.code} target='_blank' rel='noopener noreferrer'>
-                            <Button variant='outline'>View Code</Button>
+                            <Button variant='outline' className='w-full sm:w-auto'>View Code</Button>
                         </a>
                         <a href={project.live} target='_blank' rel='noopener noreferrer'>
-                            <Button variant='default'>Live Demo</Button>
+                            <Button variant='default' className='w-full sm:w-auto'>Live Demo</Button>
                         </a>
                     </div>
                 </Card>

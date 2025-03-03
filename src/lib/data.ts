@@ -18,8 +18,8 @@ export const Projects: ProjecTypes[] = [
     {
         name: "Savewave",
         image: "https://moneyview.in/images/blog/wp-content/uploads/2017/10/Blog-11-reasonsfeature-min.jpg",
-        live: "https://github.com/animesh65432/EXPENSE-TRACKER-FullStack",
-        code: "https://savewave.vercel.app",
+        live: "https://savewave.vercel.app",
+        code: "https://github.com/animesh65432/EXPENSE-TRACKER-FullStack",
         about: "Developed UI for separate premium and non-premium users . Integrated Stripe to enable users to buy premium accounts. Premium account features include: Daily / monthly / yearly expense separation, Download expenses, View download history, Leaderboard. Premium users can download their expenses, Tracks user expenses, credits, and savings displaying them in a user - friendly interface."
     }
 ]
